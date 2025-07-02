@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: $color-black-dark;
-  background-color: #fff;
+  // background-color: $color-pink-light;
 
   display: grid;
   grid-template-columns: minmax(25rem, max-content) 1fr;
@@ -24,7 +24,66 @@ body {
 }
 
 .section-sidebar{
-  background-color: $color-white-light;
+  background-color: #f8f8f8;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
+
+  position: relative;
+  z-index: 100;
+}
+
+.section-content{
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  background: radial-gradient(farthest-corner at 60% 0%, #f4e5eca9, #f8f8f8);
+  z-index: 10;
+
+  position: relative;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(6rem, min-content) 1fr;
+}
+
+.bg__gr-1{
+  background: radial-gradient(farthest-corner at 0% 25%, #ccd0e6, #f8f8f8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 33%;
+  width: 100%;
+  z-index: -1;
+  filter: blur(5rem);
+}
+
+.bg__gr-2{
+  background: radial-gradient(circle at left, #ecd7ef , #ffffff);
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 33%;
+  width: 100%;
+  z-index: -1;
+  filter: blur(5rem);
+}
+.bg__gr-3{
+  background: radial-gradient(circle at left, #fde0f2 , #ffffff);
+  position: absolute;
+  top: 66%;
+  left: 0;
+  height: 33%;
+  width: 100%;
+  z-index: -1;
+  filter: blur(5rem);
+}
+
+.main__bg{
+  background: radial-gradient(farthest-corner at 60% 0%, #ebdfe5, #f8f8f8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30%;
+  width: 50%;
+  filter: blur(5rem);
+  z-index: -1;
 }

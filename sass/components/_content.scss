@@ -1,0 +1,188 @@
+.content {
+  &__header {
+    height: 6rem;
+    // background-color: $color-white;
+    border-bottom: 1px solid $color-white-dark-2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    gap: 5rem;
+
+    & .header {
+      &__greeting {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & p {
+          margin-right: auto;
+        }
+      }
+
+      &__search {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        width: 70%;
+        margin-right: auto;
+
+        &__icon {
+          font-size: 1.6rem;
+          margin-right: 1rem;
+          position: absolute;
+          color: $color-grey;
+          z-index: 10;
+          left: 1rem;
+        }
+
+        &__input {
+          font-size: 1.4rem;
+          width: 100%;
+          border: none;
+          transition: all 0.3s;
+          color: $color-black-light;
+          background-color: transparent;
+          box-shadow: 0 0 1.5rem #d7d7d7d0;
+          border-radius: 1rem;
+          padding: 0.7rem 1rem;
+          padding-left: 3.5rem;
+          position: relative;
+
+          &:focus {
+            outline: 1px solid $color-grey-light-2;
+            box-shadow: none;
+          }
+        }
+      }
+
+      &__notification {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        &__icon {
+          cursor: pointer;
+          padding: 0.7rem;
+          height: 1.5rem;
+          width: 1.5rem;
+          box-shadow: 0 0 1.5rem #d7d7d7d0;
+          border-radius: 50%;
+          color: $color-black-dark;
+        }
+      }
+    }
+  }
+
+  &__main {
+    // background-color: $color-white;
+
+    & .main{
+      &__header{
+        grid-column: 1 / -1;
+        height: 6rem;
+        // background-color: $color-white;
+        border-radius: 1rem;
+        border: 1px solid $color-white-dark-2;
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        margin: 2rem 3rem;
+        padding: 0 1.5rem;
+        gap: 3rem;
+
+        &__date{
+          width: 20%;
+          display: flex;
+          flex-direction: column;
+          border-right: 2px solid $color-white-dark-2;
+          padding-right: 2.5rem;
+
+          & h3{
+            font-weight: 600;
+
+            & span{
+              font-weight: 400;
+            }
+          }
+        //   align-items: center;
+        //   gap: .5rem;
+        }
+
+        &__btns{
+          width: 25%;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          border-left: 2px solid $color-white-dark-2;
+
+
+          & button{
+            max-width: 100%;
+            height: 3.5rem;
+            padding: 0 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-1;
+            // background-color: $color-white;
+            color: $color-black-light;
+            cursor: pointer;
+            transition: all .1s;
+
+            &:hover{
+              background-color: $color-white-dark-1;
+              color: $color-black-light;
+              box-shadow: 0 0 1.5rem #d7d7d7d0;
+              transform: scale(1.05);
+            }
+
+            &:last-child{
+              background-color: $color-black-dark;
+              color: $color-white-dark-1;
+              transition: all .1s;
+
+              &:hover{
+                // background-color: $color-black-light;
+                color: $color-white-dark-1;
+              }
+            }
+          }
+        }
+
+        & .header{
+          &__tasks__img{
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // border-right: 2px solid $color-white-dark-1;
+            gap: 1rem;
+          }
+          &__tasks{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+          &__imgs{
+            display: flex;
+          }
+          &__img{
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            margin-right: -1rem;
+            border: 3px solid $color-white;
+
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

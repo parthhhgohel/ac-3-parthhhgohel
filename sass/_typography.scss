@@ -11,11 +11,26 @@
 }
 
 .heading--3{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-black-light;
+}
+
+.heading--3-5{
+    font-size: 1.4rem;
+    font-weight: 500;
     color: $color-black-light;
 }
 
 .heading--4{
-    font-size: 1.4rem;
+    // font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $color-black-light;
+}
+
+.heading--5{
+    font-size: 1.18rem;
+    font-weight: 500;
     color: $color-black-light;
 }
