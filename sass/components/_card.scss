@@ -1,14 +1,16 @@
 .card{
     background-color: $color-white;
     border-radius: 1rem;
+    min-width: 26.30rem;
     border: 1px solid $color-white-dark-1;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     position: relative;
     z-index: 10;
     overflow: hidden;
+    min-height: fit-content;
 
     &__header{
         display: flex;
@@ -35,6 +37,11 @@
                 background-color: transparent;
                 margin-left: auto;
                 padding: 0 .5rem;
+
+                & ion-icon{
+                    font-size: 1.5rem;
+                    color: $color-sky-green-dark;
+                }
             }
         }
     }
@@ -85,6 +92,7 @@
             margin-right: -.5rem;
             border-radius: 50%;
             color: rgba(0, 60, 145, 0.682);
+            cursor: pointer;
         }
 
         & .progress__ball--deactive{
@@ -93,6 +101,12 @@
             margin-right: -.5rem;
             border-radius: 50%;
             color: rgba(0, 60, 145, 0.185);
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover{
+                color: rgba(0, 60, 145, 0.682);
+            }
         }
     }
 
@@ -101,6 +115,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
+        // margin-top: 1rem;
 
         & .footer__imgs{
             display: flex;
@@ -149,5 +164,1138 @@
     height: 100%;
     width: 100%;
     filter: blur(15rem);
+    z-index: -1;
+}
+
+
+.card-pur{
+    background-color: $color-white;
+    border-radius: 1rem;
+    border: 1px solid $color-white-dark-1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    min-height: fit-content;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+
+        &__btn{
+            height: 2.7rem;
+            padding: 0 1rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-2;
+            background-color: #ffffff50;
+            color: rgb(48, 3, 82);
+            cursor: pointer;
+            transition: all .1s;
+
+            &:last-child{
+                background-color: transparent;
+                margin-left: auto;
+                padding: 0 .5rem;
+            }
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & h3{
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: rgb(48, 3, 82);
+        }
+
+        & p{
+            font-weight: 600;
+            color: rgb(48, 3, 82);
+            & span{
+                font-weight: 700;
+            }
+        }
+
+        & .card-pur__items{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        & .card-pur__item{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            & p{
+                font-weight: 600;
+                color: rgb(48, 3, 82);
+            }
+            & ion-icon{
+                font-size: 1.8rem;
+                color: rgb(48, 3, 82);
+            }
+        }
+    }
+    &__progress{
+        // margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        & .progress__pr{
+            display: flex;
+            justify-content: space-between;
+            & p{
+                font-size: 1.18rem;
+                font-weight: 600;
+                color: rgba(48, 3, 82, 0.755);
+            }
+        }
+
+        & .progress__balls{
+            // justify-content: space-between;
+        }
+
+        & .progress__ball--active{
+            // font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgb(48, 3, 82);
+            cursor: pointer;
+        }
+
+        & .progress__ball--deactive{
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(48, 3, 82, 0.188);
+            transition: all .2s;
+
+            &:hover{
+                color: rgb(48, 3, 82);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        // margin-top: 1rem;
+        background-color: transparent;
+
+        & .footer__imgs{
+            display: flex;
+            // gap: 1rem;
+        }
+        & .footer__img{
+            height: 2.5rem;
+            width: 2.5rem;
+            border: 2px solid $color-white;
+            margin-right: -1.2rem;
+            border-radius: 50%;
+        }
+
+        & .footer__btns{
+            display: flex;
+            gap: 1rem;
+        }
+
+        & .footer__btn{
+            height: 2.5rem;
+            padding: 0 .5rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-2;
+            background-color: transparent;
+            color: rgba(48, 3, 82, 0.755);
+            cursor: pointer;
+            transition: all .1s;
+
+            & ion-icon{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.sky-pur-bg{
+    background: linear-gradient(180deg, rgba(126, 113, 208, 0.625) 10%, rgba(126, 113, 208, 0.319) 100%, rgba(255, 255, 255, 0.093) 100%);
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100%;
+    width: 100%;
+    // filter: blur(10rem);
+    z-index: -1;
+}
+
+
+.card-org{
+    background-color: $color-white;
+    border-radius: 1rem;
+    border: 1px solid $color-white-dark-1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    min-height: fit-content;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+
+        &__btn{
+            height: 2.7rem;
+            padding: 0 1rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-2;
+            background-color: #ffffff50;
+            color: rgba(222, 79, 57, 0.752);
+            cursor: pointer;
+            transition: all .1s;
+
+            &:last-child{
+                background-color: transparent;
+                margin-left: auto;
+                padding: 0 .5rem;
+
+                & ion-icon{
+                    font-size: 1.5rem;
+                    color: rgba(222, 79, 57, 0.752);
+                }
+            }
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & h3{
+            font-weight: 600;
+            line-height: 1.2;
+            color: rgba(222, 79, 57, 0.752);
+        }
+        
+        & p{
+            font-weight: 600;
+            color: rgba(222, 79, 57, 0.752);
+            & span{
+                font-weight: 700;
+            }
+        }
+        
+        & .card-pur__items{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        & .card-pur__item{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            
+            & p{
+                font-weight: 600;
+                color: rgb(48, 3, 82);
+            }
+            & ion-icon{
+                font-size: 1.8rem;
+                color: rgb(48, 3, 82);
+            }
+        }
+    }
+    &__progress{
+        // margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        
+        & .progress__pr{
+            display: flex;
+            justify-content: space-between;
+            & p{
+                font-size: 1.18rem;
+                font-weight: 600;
+                color: rgba(222, 79, 57, 0.752);
+            }
+        }
+        
+        & .progress__balls{
+            // justify-content: space-between;
+        }
+        
+        & .progress__ball--active{
+            cursor: pointer;
+            // font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(222, 79, 57, 0.892);
+        }
+        
+        & .progress__ball--deactive{
+            cursor: pointer;    
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(222, 79, 57, 0.168);
+            transition: all .2s;
+            
+            &:hover{
+                color: rgba(222, 79, 57, 0.892);
+            }
+        }
+    }
+    
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        // margin-top: 1rem;
+        background-color: transparent;
+        
+        & .footer__imgs{
+            display: flex;
+            // gap: 1rem;
+        }
+        & .footer__img{
+            height: 2.5rem;
+            width: 2.5rem;
+            border: 2px solid $color-white;
+            margin-right: -1.2rem;
+            border-radius: 50%;
+        }
+        
+        & .footer__btns{
+            display: flex;
+            gap: 1rem;
+        }
+        
+        & .footer__btn{
+            height: 2.5rem;
+            padding: 0 .5rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-2;
+            background-color: transparent;
+            color: rgba(48, 3, 82, 0.755);
+            cursor: pointer;
+            transition: all .1s;
+            
+            & ion-icon{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.sky-org-bg{
+    background: linear-gradient(180deg, rgba(222, 79, 57, 0.232) 90%, rgba(222, 79, 57, 0.073) 100%);
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100%;
+    width: 100%;
+    // filter: blur(10rem);
+    z-index: -1;
+}
+
+.card-lor{
+    background-color: $color-white;
+    border-radius: 1rem;
+    border: 1px solid $color-white-dark-1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    min-height: fit-content;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+
+        &__btn{
+            height: 2.7rem;
+            padding: 0 1rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-2;
+            background-color: #ffffff50;
+            color: rgba(204, 113, 21, 0.718);
+            cursor: pointer;
+            transition: all .1s;
+
+            &:last-child{
+                background-color: transparent;
+                margin-left: auto;
+                padding: 0 .5rem;
+
+                & ion-icon{
+                    font-size: 1.5rem;
+                    color: rgba(204, 113, 21, 0.718);
+                }
+            }
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & h3{
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: rgba(204, 113, 21, 0.926);
+        }
+
+        & p{
+            font-weight: 600;
+            color: rgba(204, 113, 21, 0.718);
+            & span{
+                font-weight: 700;
+            }
+        }
+
+        & .card-pur__items{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        & .card-pur__item{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            & p{
+                font-weight: 600;
+                color: rgba(169, 96, 19, 0.767);
+            }
+            & ion-icon{
+                font-size: 1.8rem;
+                color: rgba(169, 96, 19, 0.767);
+            }
+        }
+    }
+    &__progress{
+        // margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        & .progress__pr{
+            display: flex;
+            justify-content: space-between;
+            & p{
+                font-size: 1.18rem;
+                font-weight: 600;
+                color: rgba(204, 113, 21, 0.718);
+            }
+        }
+
+        & .progress__balls{
+            // justify-content: space-between;
+        }
+
+        & .progress__ball--active{
+            cursor: pointer;
+            // font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgb(204, 112, 21);
+        }
+
+        & .progress__ball--deactive{
+            cursor: pointer;    
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(204, 113, 21, 0.14);
+            transition: all .2s;
+
+            &:hover{
+                color:rgba(204, 113, 21);
+            }
+        }
+    }
+
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        // margin-top: 1rem;
+        background-color: transparent;
+
+        & .footer__imgs{
+            display: flex;
+            // gap: 1rem;
+        }
+        & .footer__img{
+            height: 2.5rem;
+            width: 2.5rem;
+            border: 2px solid $color-white;
+            margin-right: -1.2rem;
+            border-radius: 50%;
+        }
+
+        & .footer__btns{
+            display: flex;
+            gap: 1rem;
+        }
+
+        & .footer__btn{
+            height: 2.5rem;
+            padding: 0 .5rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid rgba(204, 113, 21, 0.211);
+            background-color: transparent;
+            color: rgba(204, 113, 21, 0.718);
+            cursor: pointer;
+            transition: all .1s;
+
+            & ion-icon{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.light-org-bg{
+    background: linear-gradient(180deg, rgba(204, 113, 21, 0.31) 60%, rgba(204, 113, 21, 0.147) 100%, rgba(222, 79, 57, 0.073) 100%);
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100%;
+    width: 100%;
+    // filter: blur(10rem);
+    z-index: -1;
+}
+
+// 
+.card-grn{
+    background-color: $color-white;
+    border-radius: 1rem;
+    border: 1px solid $color-white-dark-1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    min-height: fit-content;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+
+        &__btn{
+            height: 2.7rem;
+            padding: 0 1rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-2;
+            background-color: #ffffff50;
+            color: rgba(67, 156, 100, 0.81);
+            cursor: pointer;
+            transition: all .1s;
+
+            &:last-child{
+                background-color: transparent;
+                margin-left: auto;
+                padding: 0 .5rem;
+
+                & ion-icon{
+                    font-size: 1.5rem;
+                    color: rgba(67, 156, 100, 0.81);
+                }
+            }
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & h3{
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: rgba(67, 156, 100, 0.81);
+        }
+
+        & p{
+            font-weight: 600;
+            color: rgba(67, 156, 100, 0.81);
+            & span{
+                font-weight: 700;
+            }
+        }
+
+        & .card-grn__items{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        & .card-grn__item{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            & p{
+                font-weight: 600;
+                color: rgba(67, 156, 100, 0.81);
+            }
+            & ion-icon{
+                font-size: 1.8rem;
+                color: rgba(67, 156, 100, 0.81);
+            }
+        }
+    }
+    &__progress{
+        // margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        & .progress__pr{
+            display: flex;
+            justify-content: space-between;
+            & p{
+                font-size: 1.18rem;
+                font-weight: 600;
+                color: rgba(67, 156, 100, 0.81);
+            }
+        }
+
+        & .progress__balls{
+            // justify-content: space-between;
+        }
+
+        & .progress__ball--active{
+            cursor: pointer;
+            // font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(67, 156, 100, 0.81);
+        }
+
+        & .progress__ball--deactive{
+            cursor: pointer;    
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(67, 156, 100, 0.178);
+            transition: all .2s;
+
+            &:hover{
+                color:rgba(67, 156, 100, 0.81);
+            }
+        }
+    }
+
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        background-color: transparent;
+
+        & .footer__imgs{
+            display: flex;
+            // gap: 1rem;
+        }
+        & .footer__img{
+            height: 2.5rem;
+            width: 2.5rem;
+            border: 2px solid $color-white;
+            margin-right: -1.2rem;
+            border-radius: 50%;
+        }
+
+        & .footer__btns{
+            display: flex;
+            gap: 1rem;
+        }
+
+        & .footer__btn{
+            height: 2.5rem;
+            padding: 0 .5rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid rgba(67, 156, 100, 0.266);
+            background-color: transparent;
+            color: rgba(67, 156, 100, 0.81);
+            cursor: pointer;
+            transition: all .1s;
+
+            & ion-icon{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.light-grn-bg{
+    background: linear-gradient(180deg, rgba(67, 156, 100, 0.218) 60%, rgba(67, 156, 100, 0.132) 100%, rgba(222, 79, 57, 0.073) 100%);
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100%;
+    width: 100%;
+    // filter: blur(10rem);
+    z-index: -1;
+}
+
+//
+
+.card-pink{
+    background-color: $color-white;
+    border-radius: 1rem;
+    border: 1px solid $color-white-dark-1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    min-height: fit-content;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+
+        &__btn{
+            height: 2.7rem;
+            padding: 0 1rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-2;
+            background-color: #ffffff50;
+            color: rgba(211, 76, 186, 0.792);
+            cursor: pointer;
+            transition: all .1s;
+
+            &:last-child{
+                background-color: transparent;
+                margin-left: auto;
+                padding: 0 .5rem;
+
+                & ion-icon{
+                    font-size: 1.5rem;
+                    color: rgba(211, 76, 186, 0.792);
+                }
+            }
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & h3{
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: rgba(211, 76, 186, 0.792);
+        }
+
+        & p{
+            font-weight: 600;
+            color: rgba(211, 76, 186, 0.792);
+            & span{
+                font-weight: 700;
+            }
+        }
+
+        & .card-grn__items{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        & .card-grn__item{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            & p{
+                font-weight: 600;
+                color: rgba(211, 76, 186, 0.792);
+            }
+            & ion-icon{
+                font-size: 1.8rem;
+                color: rgba(211, 76, 186, 0.792);
+            }
+        }
+    }
+    &__progress{
+        // margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        & .progress__pr{
+            display: flex;
+            justify-content: space-between;
+            & p{
+                font-size: 1.18rem;
+                font-weight: 600;
+                color: rgba(211, 76, 186, 0.792);
+            }
+        }
+
+        & .progress__balls{
+            // justify-content: space-between;
+        }
+
+        & .progress__ball--active{
+            cursor: pointer;
+            // font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(211, 76, 186, 0.792);
+        }
+
+        & .progress__ball--deactive{
+            cursor: pointer;    
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(67, 156, 100, 0.178);
+            transition: all .2s;
+
+            &:hover{
+                color:rgba(67, 156, 100, 0.81);
+            }
+        }
+    }
+
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        // margin-top: 1rem;
+        background-color: transparent;
+
+        & .footer__imgs{
+            display: flex;
+            // gap: 1rem;
+        }
+        & .footer__img{
+            height: 2.5rem;
+            width: 2.5rem;
+            border: 2px solid $color-white;
+            margin-right: -1.2rem;
+            border-radius: 50%;
+        }
+
+        & .footer__btns{
+            display: flex;
+            gap: 1rem;
+        }
+
+        & .footer__btn{
+            height: 2.5rem;
+            padding: 0 .5rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid rgba(211, 76, 186, 0.203);
+            background-color: transparent;
+            color: rgba(211, 76, 186, 0.792);
+            cursor: pointer;
+            transition: all .1s;
+
+            & ion-icon{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.pink-bg{
+    background: linear-gradient(180deg, rgba(255, 193, 245, 0.723) 90%, rgba(222, 79, 57, 0.073) 100%);
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100%;
+    width: 100%;
+    // filter: blur(10rem);
+    z-index: -1;
+}
+
+.card-bl-gr{
+    background-color: $color-white;
+    border-radius: 1rem;
+    border: 1px solid $color-white-dark-1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    min-height: fit-content;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+
+        &__btn{
+            height: 2.7rem;
+            padding: 0 1rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white-dark-2;
+            background-color: #ffffff50;
+            color: rgba(34, 137, 163, 0.766);
+            cursor: pointer;
+            transition: all .1s;
+
+            &:last-child{
+                background-color: transparent;
+                margin-left: auto;
+                padding: 0 .5rem;
+            }
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & h3{
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: rgba(34, 137, 163, 0.766);
+        }
+
+        & p{
+            font-weight: 600;
+            color:rgba(34, 137, 163, 0.766);
+            & span{
+                font-weight: 700;
+            }
+        }
+
+        & .card-bl-gr__items{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        & .card-bl-gr__item{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            & p{
+                font-weight: 600;
+                color: rgba(34, 137, 163, 0.766);
+            }
+            & ion-icon{
+                font-size: 1.8rem;
+                color: rgba(34, 137, 163, 0.766);
+            }
+        }
+    }
+    &__progress{
+        // margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        & .progress__pr{
+            display: flex;
+            justify-content: space-between;
+            & p{
+                font-size: 1.18rem;
+                font-weight: 600;
+                color: rgba(34, 137, 163, 0.766);
+            }
+        }
+
+        & .progress__balls{
+            // justify-content: space-between;
+        }
+
+        & .progress__ball--active{
+            // font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(34, 137, 163, 0.766);
+            cursor: pointer;
+        }
+
+        & .progress__ball--deactive{
+            width: 2rem;
+            height: 2rem;
+            margin-right: -.5rem;
+            border-radius: 50%;
+            color: rgba(34, 137, 163, 0.207);
+            transition: all .2s;
+            cursor: pointer;
+
+            &:hover{
+                color: rgba(34, 137, 163, 0.766);
+            }
+        }
+    }
+
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        // margin-top: 1rem;
+        background-color: transparent;
+
+        & .footer__imgs{
+            display: flex;
+            // gap: 1rem;
+        }
+        & .footer__img{
+            height: 2.5rem;
+            width: 2.5rem;
+            border: 2px solid $color-white;
+            margin-right: -1.2rem;
+            border-radius: 50%;
+        }
+
+        & .footer__btns{
+            display: flex;
+            gap: 1rem;
+        }
+
+        & .footer__btn{
+            height: 2.5rem;
+            padding: 0 .5rem;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            border-radius: .5rem;
+            border: 1px solid rgba(34, 137, 163, 0.241);
+            background-color: transparent;
+            color: rgba(34, 137, 163, 0.766);
+            cursor: pointer;
+            transition: all .1s;
+
+            & ion-icon{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.sky-pur-bg{
+    background: linear-gradient(180deg, rgba(126, 113, 208, 0.625) 10%, rgba(126, 113, 208, 0.319) 100%, rgba(255, 255, 255, 0.093) 100%);
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100%;
+    width: 100%;
+    // filter: blur(10rem);
     z-index: -1;
 }

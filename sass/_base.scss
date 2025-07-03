@@ -21,6 +21,11 @@ body {
   display: grid;
   grid-template-columns: minmax(25rem, max-content) 1fr;
   grid-template-rows: 1fr;
+  
+  @include response(tab-port){
+    grid-template-columns: minmax(20rem, max-content) 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .section-sidebar{
@@ -29,6 +34,8 @@ body {
   grid-row: 1 / -1;
 
   position: relative;
+  border-right: 1px solid $color-white-dark-2;
+  overflow: hidden;
   z-index: 100;
 }
 
@@ -46,10 +53,10 @@ body {
 }
 
 .bg__gr-1{
-  background: radial-gradient(farthest-corner at 0% 25%, #ccd0e6, #f8f8f8);
+  background: radial-gradient(circle at left, #a8acc6b3, #f8f8f8);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10rem;
+  left: 5rem;
   height: 33%;
   width: 100%;
   z-index: -1;
@@ -57,7 +64,7 @@ body {
 }
 
 .bg__gr-2{
-  background: radial-gradient(circle at left, #ecd7ef , #ffffff);
+  background: radial-gradient(circle at left, #d893e1a8, #ffffff);
   position: absolute;
   top: 43%;
   left: 0;
@@ -67,10 +74,10 @@ body {
   filter: blur(5rem);
 }
 .bg__gr-3{
-  background: radial-gradient(circle at left, #fde0f2 , #ffffff);
+  background: radial-gradient(circle at left, #f7c7e4b6 , #ffffff);
   position: absolute;
   top: 66%;
-  left: 0;
+  left: 5rem;
   height: 33%;
   width: 100%;
   z-index: -1;

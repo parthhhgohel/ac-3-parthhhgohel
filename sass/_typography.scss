@@ -14,12 +14,27 @@
     font-size: 1.8rem;
     font-weight: 600;
     color: $color-black-light;
+
+    @include response(desktop){
+        font-size: 1.4rem;
+    }
+
+    @include response(tab-port){
+        font-size: 1.2rem;
+    }
 }
 
 .heading--3-5{
     font-size: 1.4rem;
     font-weight: 500;
     color: $color-black-light;
+
+    @include response(desktop){
+        font-size: 1.2rem;
+    }
+    @include response(tab-port){
+        font-size: 1.1rem;
+    }
 }
 
 .heading--4{
@@ -27,10 +42,18 @@
     font-size: 1.3rem;
     font-weight: 600;
     color: $color-black-light;
+
+    @include response(tab-port){
+        font-size: 1rem;
+    }
 }
 
 .heading--5{
     font-size: 1.18rem;
     font-weight: 500;
     color: $color-black-light;
+
+    @include response(tab-port){
+        font-size: 1rem;
+    }
 }
