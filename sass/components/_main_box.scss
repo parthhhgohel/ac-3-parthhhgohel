@@ -12,6 +12,10 @@
         // Rows
         grid-teplate-rows: 30rem;
     }
+
+    @include response(phone){
+        gap: 1rem;
+    }
 }
 
 .cards__box{
@@ -54,6 +58,14 @@
         // Hiding scrollbar
         &::-webkit-scrollbar{
             display: none;
+        }
+
+        @include response(tab-port){
+            max-height: 40rem;
+        }
+
+        @include response(phone){
+            gap: .5rem;
         }
     }
 

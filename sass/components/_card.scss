@@ -1,7 +1,7 @@
 .card{
     background-color: $color-white;
     border-radius: 1rem;
-    min-width: 26.30rem;
+    // min-width: 26.30rem;
     border: 1px solid $color-white-dark-1;
     padding: 1.5rem;
     display: flex;
@@ -11,6 +11,10 @@
     z-index: 10;
     overflow: hidden;
     min-height: fit-content;
+
+    @include response(phone){
+        padding: 1rem;
+    }
 
     &__header{
         display: flex;
