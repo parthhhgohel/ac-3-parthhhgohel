@@ -105,6 +105,11 @@
             border-radius: 50%;
             color: rgba(0, 60, 145, 0.682);
             cursor: pointer;
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
 
         & .progress__ball--deactive{
@@ -118,6 +123,11 @@
 
             &:hover{
                 color: rgba(0, 60, 145, 0.682);
+            }
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
             }
         }
     }
@@ -251,6 +261,8 @@
             display: flex;
             align-items: center;
             gap: .5rem;
+            cursor: pointer;
+
 
             & p{
                 font-weight: 600;
@@ -259,6 +271,10 @@
             & ion-icon{
                 font-size: 1.8rem;
                 color: rgb(48, 3, 82);
+
+                @include response(big-desktop){
+                    font-size: 2.5rem;
+                }
             }
         }
     }
@@ -290,6 +306,11 @@
             border-radius: 50%;
             color: rgb(48, 3, 82);
             cursor: pointer;
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
 
         & .progress__ball--deactive{
@@ -303,6 +324,11 @@
             &:hover{
                 color: rgb(48, 3, 82);
                 cursor: pointer;
+            }
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
             }
         }
     }
@@ -441,6 +467,7 @@
             display: flex;
             align-items: center;
             gap: .5rem;
+            cursor: pointer;
             
             & p{
                 font-weight: 600;
@@ -449,6 +476,10 @@
             & ion-icon{
                 font-size: 1.8rem;
                 color: rgb(48, 3, 82);
+
+                @include response(big-desktop){
+                    font-size: 2.5rem;
+                }
             }
         }
     }
@@ -480,6 +511,11 @@
             margin-right: -.5rem;
             border-radius: 50%;
             color: rgba(222, 79, 57, 0.892);
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
         
         & .progress__ball--deactive{
@@ -493,6 +529,11 @@
             
             &:hover{
                 color: rgba(222, 79, 57, 0.892);
+            }
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
             }
         }
     }
@@ -631,6 +672,7 @@
             display: flex;
             align-items: center;
             gap: .5rem;
+            cursor: pointer;
 
             & p{
                 font-weight: 600;
@@ -639,6 +681,10 @@
             & ion-icon{
                 font-size: 1.8rem;
                 color: rgba(169, 96, 19, 0.767);
+
+                @include response(big-desktop){
+                    font-size: 2.5rem;
+                }
             }
         }
     }
@@ -670,6 +716,11 @@
             margin-right: -.5rem;
             border-radius: 50%;
             color: rgb(204, 112, 21);
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
 
         & .progress__ball--deactive{
@@ -683,6 +734,11 @@
 
             &:hover{
                 color:rgba(204, 113, 21);
+            }
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
             }
         }
     }
@@ -822,6 +878,7 @@
             display: flex;
             align-items: center;
             gap: .5rem;
+            cursor: pointer;
 
             & p{
                 font-weight: 600;
@@ -830,6 +887,10 @@
             & ion-icon{
                 font-size: 1.8rem;
                 color: rgba(67, 156, 100, 0.81);
+
+                @include response(big-desktop){
+                    font-size: 2.5rem;
+                }
             }
         }
     }
@@ -861,6 +922,11 @@
             margin-right: -.5rem;
             border-radius: 50%;
             color: rgba(67, 156, 100, 0.81);
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
 
         & .progress__ball--deactive{
@@ -874,6 +940,11 @@
 
             &:hover{
                 color:rgba(67, 156, 100, 0.81);
+            }
+
+            @include response(big-desktop){
+                width: 2.5rem;
+                height: 2.5rem;
             }
         }
     }
@@ -1013,6 +1084,7 @@
             display: flex;
             align-items: center;
             gap: .5rem;
+            cursor: pointer;
 
             & p{
                 font-weight: 600;
@@ -1021,6 +1093,8 @@
             & ion-icon{
                 font-size: 1.8rem;
                 color: rgba(211, 76, 186, 0.792);
+
+
             }
         }
     }
@@ -1198,6 +1272,7 @@
             display: flex;
             align-items: center;
             gap: .5rem;
+            cursor: pointer;
 
             & p{
                 font-weight: 600;
@@ -1206,6 +1281,10 @@
             & ion-icon{
                 font-size: 1.8rem;
                 color: rgba(34, 137, 163, 0.766);
+
+                @include response(big-desktop){
+                    font-size: 2.5rem;
+                }
             }
         }
     }
@@ -1237,6 +1316,11 @@
             border-radius: 50%;
             color: rgba(34, 137, 163, 0.766);
             cursor: pointer;
+
+            @include response(big-desktop){
+                height: 2.5rem;
+                width: 2.5rem;
+            }
         }
 
         & .progress__ball--deactive{
@@ -1250,6 +1334,11 @@
 
             &:hover{
                 color: rgba(34, 137, 163, 0.766);
+            }
+
+            @include response(big-desktop){
+                height: 2.5rem;
+                width: 2.5rem;
             }
         }
     }
@@ -1301,8 +1390,8 @@
     }
 }
 
-.sky-pur-bg{
-    background: linear-gradient(180deg, rgba(126, 113, 208, 0.625) 10%, rgba(126, 113, 208, 0.319) 100%, rgba(255, 255, 255, 0.093) 100%);
+.bl-gr-bg{
+    background: linear-gradient(180deg, rgba(34, 137, 163, 0.19) 60%, rgba(34, 137, 163, 0.062) 100%, rgba(255, 255, 255, 0.073) 100%);
     position: absolute;
     top: 0rem;
     right: 0rem;

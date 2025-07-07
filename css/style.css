@@ -424,7 +424,8 @@ body {
     z-index: 1100;
     background-color: #ffffff;
     padding: 0.7rem;
-    border-radius: 1rem;
+    line-height: 1rem;
+    border-radius: 0.5rem;
     animation: slideIn 0.5s ease-in-out;
   }
   .sidebar__label ion-icon {
@@ -515,6 +516,7 @@ body {
   color: #808080;
   z-index: 10;
   left: 1rem;
+  cursor: pointer;
 }
 .content__header .header__search__icons {
   display: flex;
@@ -526,10 +528,15 @@ body {
   position: absolute;
   background-color: #ffffff;
   border-radius: 0.5rem;
-  color: #808080;
+  color: #111111;
   z-index: 10;
   right: 0.5rem;
   width: 4rem;
+  box-shadow: 0 0 1.5rem rgba(215, 215, 215, 0.8156862745);
+  cursor: pointer;
+}
+.content__header .header__search__icons ion-icon {
+  font-weight: 800;
 }
 .content__header .header__search__input {
   font-size: 1.4rem;
@@ -551,6 +558,16 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media screen and (max-width: 95em) {
+  .content__header .header__notification {
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 40.625em) {
+  .content__header .header__notification {
+    margin-right: 0rem;
+  }
 }
 .content__header .header__notification__icon {
   cursor: pointer;
@@ -722,6 +739,7 @@ body {
   color: #e6e6e6;
 }
 .content__main .main__header .header__tasks__img {
+  width: 55%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -729,7 +747,13 @@ body {
 }
 @media screen and (min-width: 112.5em) {
   .content__main .main__header .header__tasks__img {
-    width: 55%;
+    width: 75%;
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 95em) {
+  .content__main .main__header .header__tasks__img {
+    width: 70%;
     gap: 0.5rem;
   }
 }
@@ -950,6 +974,12 @@ body {
   color: rgba(0, 60, 145, 0.682);
   cursor: pointer;
 }
+@media screen and (min-width: 112.5em) {
+  .card__progress .progress__ball--active {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
 .card__progress .progress__ball--deactive {
   width: 2rem;
   height: 2rem;
@@ -961,6 +991,12 @@ body {
 }
 .card__progress .progress__ball--deactive:hover {
   color: rgba(0, 60, 145, 0.682);
+}
+@media screen and (min-width: 112.5em) {
+  .card__progress .progress__ball--deactive {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .card__footer {
   display: flex;
@@ -1077,6 +1113,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 .card-pur__body .card-pur__item p {
   font-weight: 600;
@@ -1085,6 +1122,11 @@ body {
 .card-pur__body .card-pur__item ion-icon {
   font-size: 1.8rem;
   color: rgb(48, 3, 82);
+}
+@media screen and (min-width: 112.5em) {
+  .card-pur__body .card-pur__item ion-icon {
+    font-size: 2.5rem;
+  }
 }
 .card-pur__progress {
   display: flex;
@@ -1108,6 +1150,12 @@ body {
   color: rgb(48, 3, 82);
   cursor: pointer;
 }
+@media screen and (min-width: 112.5em) {
+  .card-pur__progress .progress__ball--active {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
 .card-pur__progress .progress__ball--deactive {
   width: 2rem;
   height: 2rem;
@@ -1119,6 +1167,12 @@ body {
 .card-pur__progress .progress__ball--deactive:hover {
   color: rgb(48, 3, 82);
   cursor: pointer;
+}
+@media screen and (min-width: 112.5em) {
+  .card-pur__progress .progress__ball--deactive {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .card-pur__footer {
   display: flex;
@@ -1238,6 +1292,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 .card-org__body .card-pur__item p {
   font-weight: 600;
@@ -1246,6 +1301,11 @@ body {
 .card-org__body .card-pur__item ion-icon {
   font-size: 1.8rem;
   color: rgb(48, 3, 82);
+}
+@media screen and (min-width: 112.5em) {
+  .card-org__body .card-pur__item ion-icon {
+    font-size: 2.5rem;
+  }
 }
 .card-org__progress {
   display: flex;
@@ -1269,6 +1329,12 @@ body {
   border-radius: 50%;
   color: rgba(222, 79, 57, 0.892);
 }
+@media screen and (min-width: 112.5em) {
+  .card-org__progress .progress__ball--active {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
 .card-org__progress .progress__ball--deactive {
   cursor: pointer;
   width: 2rem;
@@ -1280,6 +1346,12 @@ body {
 }
 .card-org__progress .progress__ball--deactive:hover {
   color: rgba(222, 79, 57, 0.892);
+}
+@media screen and (min-width: 112.5em) {
+  .card-org__progress .progress__ball--deactive {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .card-org__footer {
   display: flex;
@@ -1400,6 +1472,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 .card-lor__body .card-pur__item p {
   font-weight: 600;
@@ -1408,6 +1481,11 @@ body {
 .card-lor__body .card-pur__item ion-icon {
   font-size: 1.8rem;
   color: rgba(169, 96, 19, 0.767);
+}
+@media screen and (min-width: 112.5em) {
+  .card-lor__body .card-pur__item ion-icon {
+    font-size: 2.5rem;
+  }
 }
 .card-lor__progress {
   display: flex;
@@ -1431,6 +1509,12 @@ body {
   border-radius: 50%;
   color: rgb(204, 112, 21);
 }
+@media screen and (min-width: 112.5em) {
+  .card-lor__progress .progress__ball--active {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
 .card-lor__progress .progress__ball--deactive {
   cursor: pointer;
   width: 2rem;
@@ -1442,6 +1526,12 @@ body {
 }
 .card-lor__progress .progress__ball--deactive:hover {
   color: rgb(204, 113, 21);
+}
+@media screen and (min-width: 112.5em) {
+  .card-lor__progress .progress__ball--deactive {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .card-lor__footer {
   display: flex;
@@ -1562,6 +1652,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 .card-grn__body .card-grn__item p {
   font-weight: 600;
@@ -1570,6 +1661,11 @@ body {
 .card-grn__body .card-grn__item ion-icon {
   font-size: 1.8rem;
   color: rgba(67, 156, 100, 0.81);
+}
+@media screen and (min-width: 112.5em) {
+  .card-grn__body .card-grn__item ion-icon {
+    font-size: 2.5rem;
+  }
 }
 .card-grn__progress {
   display: flex;
@@ -1593,6 +1689,12 @@ body {
   border-radius: 50%;
   color: rgba(67, 156, 100, 0.81);
 }
+@media screen and (min-width: 112.5em) {
+  .card-grn__progress .progress__ball--active {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
 .card-grn__progress .progress__ball--deactive {
   cursor: pointer;
   width: 2rem;
@@ -1604,6 +1706,12 @@ body {
 }
 .card-grn__progress .progress__ball--deactive:hover {
   color: rgba(67, 156, 100, 0.81);
+}
+@media screen and (min-width: 112.5em) {
+  .card-grn__progress .progress__ball--deactive {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .card-grn__footer {
   display: flex;
@@ -1724,6 +1832,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 .card-pink__body .card-grn__item p {
   font-weight: 600;
@@ -1882,6 +1991,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 .card-bl-gr__body .card-bl-gr__item p {
   font-weight: 600;
@@ -1890,6 +2000,11 @@ body {
 .card-bl-gr__body .card-bl-gr__item ion-icon {
   font-size: 1.8rem;
   color: rgba(34, 137, 163, 0.766);
+}
+@media screen and (min-width: 112.5em) {
+  .card-bl-gr__body .card-bl-gr__item ion-icon {
+    font-size: 2.5rem;
+  }
 }
 .card-bl-gr__progress {
   display: flex;
@@ -1913,6 +2028,12 @@ body {
   color: rgba(34, 137, 163, 0.766);
   cursor: pointer;
 }
+@media screen and (min-width: 112.5em) {
+  .card-bl-gr__progress .progress__ball--active {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
 .card-bl-gr__progress .progress__ball--deactive {
   width: 2rem;
   height: 2rem;
@@ -1924,6 +2045,12 @@ body {
 }
 .card-bl-gr__progress .progress__ball--deactive:hover {
   color: rgba(34, 137, 163, 0.766);
+}
+@media screen and (min-width: 112.5em) {
+  .card-bl-gr__progress .progress__ball--deactive {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 .card-bl-gr__footer {
   display: flex;
@@ -1965,8 +2092,8 @@ body {
   font-size: 1.5rem;
 }
 
-.sky-pur-bg {
-  background: linear-gradient(180deg, rgba(126, 113, 208, 0.625) 10%, rgba(126, 113, 208, 0.319) 100%, rgba(255, 255, 255, 0.093) 100%);
+.bl-gr-bg {
+  background: linear-gradient(180deg, rgba(34, 137, 163, 0.19) 60%, rgba(34, 137, 163, 0.062) 100%, rgba(255, 255, 255, 0.073) 100%);
   position: absolute;
   top: 0rem;
   right: 0rem;

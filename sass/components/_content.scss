@@ -48,6 +48,7 @@
           color: $color-grey;
           z-index: 10;
           left: 1rem;
+          cursor: pointer;
         }
 
         &__icons{
@@ -61,10 +62,16 @@
           background-color: $color-white;
           // padding: .2rem;
           border-radius: .5rem;
-          color: $color-grey;
+          color: $color-black-dark;
           z-index: 10;
           right: .5rem;
           width: 4rem;
+          box-shadow: 0 0 1.5rem #d7d7d7d0;
+          cursor: pointer;
+
+          & ion-icon{
+            font-weight: 800;
+          }
         }
 
         &__input {
@@ -90,6 +97,16 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+
+        @include response(desktop){
+          margin-right: 2rem;
+        }
+
+        @include response(phone){
+          // display: none;
+          margin-right: 0rem;
+        }
+
         &__icon {
           cursor: pointer;
           padding: 0.7rem;
@@ -280,7 +297,7 @@
 
         & .header{
           &__tasks__img{
-            // width: 55%;
+            width: 55%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -288,7 +305,12 @@
             gap: 1rem;
 
             @include response(big-desktop){
-              width: 55%;
+              width: 75%;
+              gap: .5rem;
+            }
+
+            @include response(desktop){
+              width: 70%;
               gap: .5rem;
             }
 
