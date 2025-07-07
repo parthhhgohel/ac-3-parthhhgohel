@@ -8,6 +8,12 @@
 
     gap: 2rem;
     padding: 0 2rem;
+
+    @include response(big-desktop){
+        gap: 3rem;
+        padding: 0 3rem;
+    }
+
     @include response(tab-port){
         // Rows
         grid-teplate-rows: 30rem;

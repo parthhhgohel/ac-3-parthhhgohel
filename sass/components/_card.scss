@@ -76,6 +76,10 @@
         flex-direction: column;
         gap: .5rem;
 
+        @include response(big-desktop){
+            gap: 1rem;
+        }
+
         & .progress__pr{
             display: flex;
             justify-content: space-between;
@@ -87,6 +91,10 @@
 
         & .progress__balls{
             // justify-content: space-between;
+
+            @include response(big-desktop){
+                justify-content: space-between;
+            }
         }
 
         & .progress__ball--active{
