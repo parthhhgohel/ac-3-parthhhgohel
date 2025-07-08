@@ -25,6 +25,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -36,6 +37,7 @@ body {
   display: grid;
   grid-template-columns: minmax(25rem, max-content) 1fr;
   grid-template-rows: 1fr;
+  height: 100%;
 }
 @media screen and (max-width: 56.25em) {
   body {
@@ -46,7 +48,7 @@ body {
 @media screen and (max-width: 40.625em) {
   body {
     grid-template-columns: 1fr;
-    grid-template-rows: min-content 1fr;
+    grid-template-rows: 1fr;
   }
 }
 
@@ -144,7 +146,7 @@ body {
   background: radial-gradient(circle at left, rgba(216, 147, 225, 0.6588235294), #ffffff);
   position: absolute;
   top: 43%;
-  left: 0;
+  left: 5rem;
   height: 33%;
   width: 100%;
   z-index: -1;
@@ -534,9 +536,11 @@ body {
   width: 4rem;
   box-shadow: 0 0 1.5rem rgba(215, 215, 215, 0.8156862745);
   cursor: pointer;
+  transition: all 0.3s;
 }
-.content__header .header__search__icons ion-icon {
-  font-weight: 800;
+.content__header .header__search__icons:hover {
+  color: #666666;
+  transform: scale(1.2);
 }
 .content__header .header__search__input {
   font-size: 1.4rem;
@@ -578,6 +582,11 @@ body {
   border-radius: 50%;
   color: #111111;
   background-color: #ffffff;
+  transition: all 0.3s;
+}
+.content__header .header__notification__icon:hover {
+  background-color: #c0c0c0;
+  transform: scale(1.3);
 }
 .content__main .header__search__phone {
   display: none;
@@ -770,6 +779,14 @@ body {
   gap: 0.5rem;
   margin-right: auto;
 }
+.content__main .main__header .header__tasks h4 {
+  display: flex;
+  gap: 0.5rem;
+}
+.content__main .main__header .header__tasks h4 span {
+  display: flex;
+  align-items: center;
+}
 .content__main .main__header .header__imgs {
   display: flex;
   margin-left: auto;
@@ -801,24 +818,43 @@ body {
 
 .main__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
   gap: 2rem;
   padding: 0 2rem;
 }
 @media screen and (min-width: 112.5em) {
   .main__cards {
+    height: 100% !important;
     gap: 3rem;
     padding: 0 3rem;
   }
 }
+@media screen and (max-width: 95em) {
+  .main__cards {
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 80.375em) {
+  .main__cards {
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 75em) {
+  .main__cards {
+    height: 89rem;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+}
 @media screen and (max-width: 56.25em) {
   .main__cards {
-    grid-teplate-rows: 30rem;
+    height: 107rem;
   }
 }
 @media screen and (max-width: 40.625em) {
   .main__cards {
-    gap: 1rem;
+    height: 80rem;
   }
 }
 
@@ -829,10 +865,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-height: 60rem;
-}
-.cards__box--2 {
-  max-height: 55.7rem;
+  height: 100%;
 }
 .cards__box__header {
   display: flex;
@@ -848,19 +881,47 @@ body {
   font-weight: 600;
   margin-right: auto;
 }
+.cards__box__header ion-icon {
+  color: #4d4d4d;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.cards__box__header ion-icon:hover {
+  color: #111111;
+  transform: scale(1.2);
+}
 .cards__box__body {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   max-height: 50rem;
+  gap: 1rem;
   overflow-y: auto;
 }
 .cards__box__body::-webkit-scrollbar {
   display: none;
 }
+.cards__box__body--2 {
+  max-height: 55.7rem;
+}
+@media screen and (min-width: 112.5em) {
+  .cards__box__body {
+    min-height: 70rem;
+  }
+}
+@media screen and (max-width: 95em) {
+  .cards__box__body {
+    max-height: 52rem !important;
+  }
+}
+@media screen and (max-width: 75em) {
+  .cards__box__body {
+    max-height: 95rem !important;
+  }
+}
 @media screen and (max-width: 56.25em) {
   .cards__box__body {
-    max-height: 40rem;
+    max-height: 90rem !important;
   }
 }
 @media screen and (max-width: 40.625em) {
@@ -876,6 +937,22 @@ body {
 }
 .cards__box__icon:hover {
   color: #666666;
+}
+
+.cards__box--1 {
+  max-height: 79rem !important;
+}
+
+.cards__box--2 {
+  max-height: 53rem !important;
+}
+
+.cards__box--3 {
+  max-height: 68rem !important;
+}
+
+.cards__box--4 {
+  max-height: 59rem !important;
 }
 
 .card {
@@ -924,6 +1001,12 @@ body {
 .card__header__btn:last-child ion-icon {
   font-size: 1.5rem;
   color: #3794AA;
+}
+.card__header__btn:last-child ion-icon:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
+}
+.card__header__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 .card__body {
   display: flex;
@@ -1036,6 +1119,9 @@ body {
 .card__footer .footer__btn ion-icon {
   font-size: 1.5rem;
 }
+.card__footer .footer__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
+}
 
 .sky-blue-bg {
   background: radial-gradient(farthest-corner at 100% 0%, #0442ef, #f8f8f8);
@@ -1085,6 +1171,9 @@ body {
   background-color: transparent;
   margin-left: auto;
   padding: 0 0.5rem;
+}
+.card-pur__header__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 .card-pur__body {
   display: flex;
@@ -1213,6 +1302,9 @@ body {
 .card-pur__footer .footer__btn ion-icon {
   font-size: 1.5rem;
 }
+.card-pur__footer .footer__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
+}
 
 .sky-pur-bg {
   background: linear-gradient(180deg, rgba(126, 113, 208, 0.625) 10%, rgba(126, 113, 208, 0.319) 100%, rgba(255, 255, 255, 0.093) 100%);
@@ -1265,6 +1357,9 @@ body {
 .card-org__header__btn:last-child ion-icon {
   font-size: 1.5rem;
   color: rgba(222, 79, 57, 0.752);
+}
+.card-org__header__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 .card-org__body {
   display: flex;
@@ -1385,12 +1480,15 @@ body {
   border-radius: 0.5rem;
   border: 1px solid #cccccc;
   background-color: transparent;
-  color: rgba(48, 3, 82, 0.755);
+  color: rgba(222, 79, 57, 0.866);
   cursor: pointer;
   transition: all 0.1s;
 }
 .card-org__footer .footer__btn ion-icon {
   font-size: 1.5rem;
+}
+.card-org__footer .footer__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 
 .sky-org-bg {
@@ -1444,6 +1542,9 @@ body {
 .card-lor__header__btn:last-child ion-icon {
   font-size: 1.5rem;
   color: rgba(204, 113, 21, 0.718);
+}
+.card-lor__header__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 .card-lor__body {
   display: flex;
@@ -1572,6 +1673,9 @@ body {
 .card-lor__footer .footer__btn ion-icon {
   font-size: 1.5rem;
 }
+.card-lor__footer .footer__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
+}
 
 .light-org-bg {
   background: linear-gradient(180deg, rgba(204, 113, 21, 0.31) 60%, rgba(204, 113, 21, 0.147) 100%, rgba(222, 79, 57, 0.073) 100%);
@@ -1624,6 +1728,9 @@ body {
 .card-grn__header__btn:last-child ion-icon {
   font-size: 1.5rem;
   color: rgba(67, 156, 100, 0.81);
+}
+.card-grn__header__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 .card-grn__body {
   display: flex;
@@ -1752,6 +1859,9 @@ body {
 .card-grn__footer .footer__btn ion-icon {
   font-size: 1.5rem;
 }
+.card-grn__footer .footer__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
+}
 
 .light-grn-bg {
   background: linear-gradient(180deg, rgba(67, 156, 100, 0.218) 60%, rgba(67, 156, 100, 0.132) 100%, rgba(222, 79, 57, 0.073) 100%);
@@ -1804,6 +1914,9 @@ body {
 .card-pink__header__btn:last-child ion-icon {
   font-size: 1.5rem;
   color: rgba(211, 76, 186, 0.792);
+}
+.card-pink__header__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 .card-pink__body {
   display: flex;
@@ -1915,6 +2028,9 @@ body {
 .card-pink__footer .footer__btn ion-icon {
   font-size: 1.5rem;
 }
+.card-pink__footer .footer__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
+}
 
 .pink-bg {
   background: linear-gradient(180deg, rgba(255, 193, 245, 0.723) 90%, rgba(222, 79, 57, 0.073) 100%);
@@ -1963,6 +2079,9 @@ body {
   background-color: transparent;
   margin-left: auto;
   padding: 0 0.5rem;
+}
+.card-bl-gr__header__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 .card-bl-gr__body {
   display: flex;
@@ -2090,6 +2209,9 @@ body {
 }
 .card-bl-gr__footer .footer__btn ion-icon {
   font-size: 1.5rem;
+}
+.card-bl-gr__footer .footer__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
 }
 
 .bl-gr-bg {

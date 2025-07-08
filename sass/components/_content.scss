@@ -68,9 +68,15 @@
           width: 4rem;
           box-shadow: 0 0 1.5rem #d7d7d7d0;
           cursor: pointer;
+          transition: all .3s;
 
           & ion-icon{
-            font-weight: 800;
+            // font-weight: 800;
+
+          }
+          &:hover{
+            color: $color-grey-dark-1;
+            transform: scale(1.2);
           }
         }
 
@@ -116,6 +122,12 @@
           border-radius: 50%;
           color: $color-black-dark;
           background-color: $color-white;
+          transition: all 0.3s;
+
+          &:hover{
+            background-color: $color-grey-light-3;
+            transform: scale(1.3);
+          }
         }
       }
     }
@@ -327,6 +339,15 @@
             align-items: center;
             gap: 0.5rem;
             margin-right: auto;
+
+            & h4{
+              display: flex;
+              gap: .5rem;
+              & span{
+                display: flex;
+                align-items: center;
+              }
+            }
           }
           &__imgs{
             display: flex;

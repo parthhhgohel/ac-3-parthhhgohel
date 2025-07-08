@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -22,6 +23,8 @@ body {
   display: grid;
   grid-template-columns: minmax(25rem, max-content) 1fr;
   grid-template-rows: 1fr;
+  // height: 100vh;
+  height: 100%;
   
   @include response(tab-port){
     grid-template-columns: minmax(20rem, max-content) 1fr;
@@ -30,7 +33,7 @@ body {
 
   @include response(phone){
     grid-template-columns: 1fr;
-    grid-template-rows: min-content 1fr;
+    grid-template-rows: 1fr;
   }
 }
 
@@ -125,7 +128,7 @@ body {
   background: radial-gradient(circle at left, #d893e1a8, #ffffff);
   position: absolute;
   top: 43%;
-  left: 0;
+  left: 5rem;
   height: 33%;
   width: 100%;
   z-index: -1;

@@ -40,6 +40,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
         }
     };
 
+    @if $breakpoint == breakpoint{
+        @media screen and (max-width: 80.375em){
+            @content
+        }
+    }
+        
     @if $breakpoint == desktop{
         @media screen and (max-width: 95em){
             @content

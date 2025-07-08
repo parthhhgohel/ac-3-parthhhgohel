@@ -45,7 +45,15 @@
                 & ion-icon{
                     font-size: 1.5rem;
                     color: $color-sky-green-dark;
+
+                    &:hover{
+                        background-color: #ffffffaa;
+                    }
                 }
+            }
+
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
@@ -174,6 +182,10 @@
             & ion-icon{
                 font-size: 1.5rem;
             }
+
+            &:hover{
+                background-color: #ffffffaa;
+            }
         }
     }
 }
@@ -228,6 +240,10 @@
                 background-color: transparent;
                 margin-left: auto;
                 padding: 0 .5rem;
+            }
+
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
@@ -376,6 +392,10 @@
             & ion-icon{
                 font-size: 1.5rem;
             }
+
+            &:hover{
+                background-color: #ffffffaa;
+            }
         }
     }
 }
@@ -435,6 +455,9 @@
                     font-size: 1.5rem;
                     color: rgba(222, 79, 57, 0.752);
                 }
+            }
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
@@ -574,12 +597,16 @@
             border-radius: .5rem;
             border: 1px solid $color-white-dark-2;
             background-color: transparent;
-            color: rgba(48, 3, 82, 0.755);
+            color: rgba(222, 79, 57, 0.866);
             cursor: pointer;
             transition: all .1s;
             
             & ion-icon{
                 font-size: 1.5rem;
+            }
+
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
@@ -639,6 +666,10 @@
                     font-size: 1.5rem;
                     color: rgba(204, 113, 21, 0.718);
                 }
+            }
+            
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
@@ -786,6 +817,10 @@
             & ion-icon{
                 font-size: 1.5rem;
             }
+
+            &:hover{
+                background-color: #ffffffaa;
+            }
         }
     }
 }
@@ -845,6 +880,9 @@
                     font-size: 1.5rem;
                     color: rgba(67, 156, 100, 0.81);
                 }
+            }
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
@@ -991,6 +1029,10 @@
             & ion-icon{
                 font-size: 1.5rem;
             }
+
+            &:hover{
+                background-color: #ffffffaa;
+            }
         }
     }
 }
@@ -1051,6 +1093,9 @@
                     font-size: 1.5rem;
                     color: rgba(211, 76, 186, 0.792);
                 }
+            }
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
@@ -1186,6 +1231,10 @@
             & ion-icon{
                 font-size: 1.5rem;
             }
+
+            &:hover{
+                background-color: #ffffffaa;
+            }
         }
     }
 }
@@ -1239,6 +1288,10 @@
                 background-color: transparent;
                 margin-left: auto;
                 padding: 0 .5rem;
+            }
+
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
@@ -1385,6 +1438,10 @@
 
             & ion-icon{
                 font-size: 1.5rem;
+            }
+
+            &:hover{
+                background-color: #ffffffaa;
             }
         }
     }
